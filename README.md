@@ -101,5 +101,5 @@ que se utiliza como base para trabajar con `Yocto Project`. Luego de clonar este
 solo es necesario iniciar el ambiente de trabajo y correr el bitbake que uno decida, en nuestro caso
 utilzamos una imagen sato. Al terminar el bitbake, vamos a tener un archivo en la dirección 
 /poky-dunfell/build-P2/tmp/deploy/images/raspberrypi2 el cual va a tener de nombre ''core-image-sato-raspberrypi2.rpi-sdimg''.
-Este archivo es el cual se utliza en la sd-card del raspberry y listo, una vez particionado la sd-card 
+Este archivo es el que se utiliza en la sd-card del raspberry y listo, una vez particionado la sd-card 
 el sistema embebido está funcionando.
