@@ -16,7 +16,7 @@ Pablo Chaves Alfaro - 2017007204
 * [Receta](#Receta)
 * [Meta layers](#Meta-layers)
 * [Protocolo SSH](#Protocolo-SSH)
-* [Implementación de la imagen](#Implementacion-de-la-imagen)
+* [Implementación de la imagen](#Implementación-de-la-imagen)
 
 ## Información general
 
