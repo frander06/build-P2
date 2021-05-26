@@ -91,6 +91,15 @@ información que necesita para correrse.
 
 ## protocolo SSH
 
+El sistema embebido es necesario, para nuestra aplicación, estar conectado a un computador 
+madre donde se van a ver los resultados obtenidos en el archivo .txt, para hacer esta conexión
+se utilizó el protocolo SSH mediante las aplicaciones PuTTy y FileZilla. 
+La conexión se hizo mediante un cable Ethernet entre el Raspberry Pi y la computadora madre.
+Además, fue necesario agregar un archivo un archivo en blanco dentro de la sd-card el cual tiene
+de nombre ''ssh'' y no posee alguna extensión. Seguidamente con el conocimiento de la ip del 
+Raspberry Pi, el usuario y el puerto en el que está conectado se puede establecer la conexión
+entre ambos dispositivos.
+
 
 ## Implementación de la imagen
 
