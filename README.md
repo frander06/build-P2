@@ -42,6 +42,7 @@ y poder aplicar el modelo ya preentrenado (se utiliza un archivo con extensión 
 obtiene al entrenar el modelo) para predecir las emociones de las imágenes entrantes. Estos 
 fotogramas los estamos tomando cada segundo para poder obtener un buen análisis y reducir la
 incertidumbre en emociones mal predichas.
+
 Por otro lado, para implementar este programa en nuestro sistema embebido, la biblioteca de 
 `TensorFlow` llega a ser muy pesada, debido a esto, se tiene la alternativa de utilizar 
 `TensorFlow-lite`, donde debido a esto, modificamos le código para que utilizara esta 
@@ -95,6 +96,7 @@ El sistema embebido es necesario, para nuestra aplicación, estar conectado a un
 madre donde se van a ver los resultados obtenidos en el archivo .txt, para hacer esta conexión
 se utilizó el protocolo SSH mediante las aplicaciones PuTTy y FileZilla. 
 La conexión se hizo mediante un cable Ethernet entre el Raspberry Pi y la computadora madre.
+
 Además, fue necesario agregar un archivo un archivo en blanco dentro de la sd-card el cual tiene
 de nombre ''ssh'' y no posee alguna extensión. Seguidamente con el conocimiento de la ip del 
 Raspberry Pi, el usuario y el puerto en el que está conectado se puede establecer la conexión
