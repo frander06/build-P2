@@ -16,6 +16,7 @@ Pablo Chaves Alfaro - 2017007204
 * [Receta](#Receta)
 * [Meta layers](#Meta-layers)
 * [Protocolo SSH](#Protocolo-SSH)
+* [Implementación de la imagen](#Implementacion-de-la-imagen)
 
 ## Información general
 
@@ -33,14 +34,21 @@ recaudada bajo el protocol `SSH`.
 ## Programa
 
 El programa se diseñó haciendo uso de las librerías de `TensorFlow` para crear un algoritmo
-de `Machine Learning` ue aprende mediante una serie de capas a reconocer las emociones en 
+de `Machine Learning` que aprende mediante una serie de capas a reconocer las emociones en 
 una imagen, la cual deberá estar suficientemente iluminada para tener una precisión alta en
 el reconocimiento de la emoción como tal. Con el detector creado, se utilizó la biblioteca de 
-`OpenCV` para lograr capturar fotogramas en un video utilizando la camara del dispositivo 
-y poder aplicar el modelo ya preentrenado (se obtiene de un archivo con extensión .h5, que se 
+`OpenCV` para lograr capturar fotogramas en un video utilizando la cámara del dispositivo 
+y poder aplicar el modelo ya preentrenado (se utiliza un archivo con extensión .h5, que se 
 obtiene al entrenar el modelo) para predecir las emociones de las imágenes entrantes. Estos 
 fotogramas los estamos tomando cada segundo para poder obtener un buen análisis y reducir la
 incertidumbre en emociones mal predichas.
+Por otro lado, para implementar este programa en nuestro sistema embebido, la biblioteca de 
+`TensorFlow` llega a ser muy pesada, debido a esto, se tiene la alternativa de utilizar 
+`TensorFlow-lite`, donde debido a esto, modificamos le código para que utilizara esta 
+biblioteca especializada en ser ligera para dispositivos móviles y sistemas embebidos.
+Finalmente, los resultados capturados se guardan en un archivo con extensión .txt los cuales
+llevan la hora de la captura junto con la emoción predicha y se guardan en la misma carpeta que 
+se encuentre el programa.
 
 ## Receta
 
@@ -82,3 +90,16 @@ sistemas móviles y sistemas embebidos.
 información que necesita para correrse.
 
 ## protocolo SSH
+
+
+##Implementación de la imagen
+
+En este repositorio se encuentran los archivos principales para hacer el bitbake utilizando 
+el flujo de trabajo de `Yocto Project`, para poder instalar esta imagen, es necesario 
+clonar este repositorio dentro de la carpeta de `poky-dunfell` la cual es el repositorio
+que se utiliza como base para trabajar con `Yocto Project`. Luego de clonar este repositorio
+solo es necesario iniciar el ambiente de trabajo y correr el bitbake que uno decida, en nuestro caso
+utilzamos una imagen sato. Al terminar el bitbake, vamos a tener un archivo en la dirección 
+/poky-dunfell/build-P2/tmp/deploy/images/raspberrypi2 el cual va a tener de nombre ''core-image-sato-raspberrypi2.rpi-sdimg''.
+Este archivo es el cual se utliza en la sd-card del raspberry y listo, una vez particionado la sd-card 
+el sistema embebido está funcionando.
