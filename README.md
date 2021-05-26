@@ -90,7 +90,7 @@ sistemas móviles y sistemas embebidos.
 7. `meta-cine`: layer que contiene nuestra receta donde se encuentra el programa y toda la 
 información que necesita para correrse.
 
-## protocolo SSH
+## Protocolo SSH
 
 El sistema embebido es necesario, para nuestra aplicación, estar conectado a un computador 
 madre donde se van a ver los resultados obtenidos en el archivo .txt, para hacer esta conexión
