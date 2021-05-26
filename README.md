@@ -29,7 +29,7 @@ computador para su proceso, el cual va a ser dado por algoritmos de `Machine Lea
 la biblioteca de `TensorFlow-lite` de python va a hacer el trabajo. Posteriormente, nuestro
 `machine target` es un Raspberry Pi 2 model B donde vamos a montar nuestro sistema 
 operativo especializado, el cual está conectado a un `host` donde se va a enviar la información
-recaudada bajo el protocolo `SSH`.
+recaudada bajo el protocol `SSH`.
 
 ## Programa
 
@@ -66,7 +66,7 @@ en la dirección meta-cine/conf/.
 Las meta-layers dentro del flujo de trabajo nos brinda las dependencias de nuestro programa
 para que funcione correctamente. En nuestro caso, las layers a utilizar son:
 
-1. `meta`: similar a ''openembedded'', que nos brinda paquetes necesarios para poder correr
+1. `meta`: similar a ''openembedded'', que nos brinda paquetes básicos necesarios para poder correr
 los bitbakes dentro del flujo de trabajo de `Yocto Project`. Proveniente de ''openembedded core''
 
 2. `meta-poky`: referencia de poky para utilzar las dependencias del flujo de trabajo de yocto-project,
