@@ -29,7 +29,7 @@ computador para su proceso, el cual va a ser dado por algoritmos de `Machine Lea
 la biblioteca de `TensorFlow-lite` de python va a hacer el trabajo. Posteriormente, nuestro
 `machine target` es un Raspberry Pi 2 model B donde vamos a montar nuestro sistema 
 operativo especializado, el cual está conectado a un `host` donde se va a enviar la información
-recaudada bajo el protocol `SSH`.
+recaudada bajo el protocolo `SSH`.
 
 ## Programa
 
