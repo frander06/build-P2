@@ -1,4 +1,4 @@
-# Tarea-4 Uso de bibliotecas para aprendizaje supervisado
+# Proyecto-2 Sistema Embebido Detector de Emociones
 
 ## Estudiantes:
 Angelo M. Isaac Bonilla - 2016093978
@@ -18,6 +18,7 @@ Pablo Chaves Alfaro - 2017007204
 * [Protocolo SSH](#Protocolo-SSH)
 
 ## Información general
+
 Se esta creando un sistema embebido para el reconocimiento y clasificación de emociones faciales.
 Primeramente, para crear nuestro sistema embebido se está haciendo uso del flujo de trabajo
 de `Yocto Project`, el cual consiste en crear capas con dependencias que se derivan de recetas 
@@ -30,6 +31,16 @@ operativo especializado, el cual está conectado a un `host` donde se va a envia
 recaudada bajo el protocol `SSH`.
 
 ## Programa
+
+El programa se diseñó haciendo uso de las librerías de `TensorFlow` para crear un algoritmo
+de `Machine Learning` ue aprende mediante una serie de capas a reconocer las emociones en 
+una imagen, la cual deberá estar suficientemente iluminada para tener una precisión alta en
+el reconocimiento de la emoción como tal. Con el detector creado, se utilizó la biblioteca de 
+`OpenCV` para lograr capturar fotogramas en un video utilizando la camara del dispositivo 
+y poder aplicar el modelo ya preentrenado (se obtiene de un archivo con extensión .h5, que se 
+obtiene al entrenar el modelo) para predecir las emociones de las imágenes entrantes. Estos 
+fotogramas los estamos tomando cada segundo para poder obtener un buen análisis y reducir la
+incertidumbre en emociones mal predichas.
 
 ## Receta
 
