@@ -92,7 +92,7 @@ información que necesita para correrse.
 ## protocolo SSH
 
 
-##Implementación de la imagen
+## Implementación de la imagen
 
 En este repositorio se encuentran los archivos principales para hacer el bitbake utilizando 
 el flujo de trabajo de `Yocto Project`, para poder instalar esta imagen, es necesario 
