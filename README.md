@@ -66,7 +66,8 @@ en la dirección meta-cine/conf/.
 Las meta-layers dentro del flujo de trabajo nos brinda las dependencias de nuestro programa
 para que funcione correctamente. En nuestro caso, las layers a utilizar son:
 
-1. `meta`:
+1. `meta`: similar a ''openembedded'', que nos brinda paquetes necesarios para poder correr
+los bitbakes dentro del flujo de trabajo de `Yocto Project`. Proveniente de ''openembedded core''
 
 2. `meta-poky`: referencia de poky para utilzar las dependencias del flujo de trabajo de yocto-project,
 se utilizó esta debido a que sigue teniendo sopporte dentro de `GitHub` por la comunidad.
